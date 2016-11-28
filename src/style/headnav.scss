@@ -1,0 +1,142 @@
+$maincolor:#33CC99;
+$mainfont:'微软雅黑', Helvetica;
+
+#header{
+  display: flex;
+  width: 100vw;
+  padding: 20px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+
+
+}
+//#nav-bar-icon{
+//  background:{
+//    image: url('../icon/nav-icon.png');
+//    size: contain;
+//    repeat:no-repeat;
+//
+//  }
+//  width:20px;
+//  height:20px;
+//}
+#nav-panel{
+  display: none;
+  position: fixed;
+  bottom:0px;
+  left:0px;
+
+  ul{
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    background-color:#eee;
+
+  }
+
+  .nav-item{
+    text-align: center;
+    height: inherit;
+    line-height: inherit;
+    font-size: 12px;
+  }
+}
+#nav-bar{
+  @media (max-width:414px){
+    display: none;
+
+  }
+  ul{
+    font-size: 0px;
+    letter-spacing: -4px;
+    font-family: $mainfont;
+  }
+
+}
+.nav-item{
+  display: inline-block;
+  padding: 0 20px;
+  font-size: 14px;
+  line-height: 28px;
+  height:28px;
+  color: #ccc;
+  letter-spacing: 0px;
+
+}
+.nav-item-active{
+  color:$maincolor;
+}
+
+#search{
+  display: flex;
+  justify-content: space-between;
+  border-radius: 4px;
+  background-color:rgba(51,204,153,0.5);
+  padding: 4px 10px;
+  height: 1.5em;
+
+
+}
+#search-input{
+
+  outline: none;
+  border: none;
+  font-size: 12px;
+  color: #fff;
+  background-color: transparent;
+  line-height:24px;
+  height: 24px;
+  font-size: 12px;
+  display: inline-block;
+}
+#search-btn{
+  display: inline-block;
+  width: 20px;
+  height:20px;
+  background: {
+    image:url('../icon/search-btn.png');
+    size:contain;
+  };
+}
+#backToTop{
+  padding: 10px;
+  background-color:rgba(51,204,153,0.3);
+  color: white;
+  font-size: 12px;
+  font-family: $mainfont;
+  line-height: 1.5;
+  position: fixed;
+  bottom: 66px;
+  right: 0px;
+}
+#backToTop:hover{
+  cursor: pointer;
+  background-color: rgba(51,204,153,0.8);
+  transition: background-color 0.2s ease;
+}
+//#footer{
+//  background-color: ;
+//}
+@media (max-width: 375px){
+  max-width: 375px;
+}
+@media (max-width:414px){  //iphone 6s protrait
+
+  max-width: 414px;
+  #search{
+    width: 100%;
+  }
+  #search-input{
+    width: 75vw;
+  }
+  #nav-panel{
+    display: block;
+  }
+  #footer{
+    display:none;
+  }
+}
